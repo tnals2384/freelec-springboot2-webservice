@@ -22,7 +22,7 @@ public class IndexController {
         model.addAttribute("posts", postsService.findAllDesc());
         SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if(user != null) {
-            model.addAttribute("username", user.getName());
+            model.addAttribute("userName", user.getName());
         }
         return "index";
     }
@@ -39,6 +39,5 @@ public class IndexController {
 
         return "posts-update";
     }
-
 
 }
